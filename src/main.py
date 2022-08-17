@@ -9,76 +9,12 @@ table_name = "CryptoTrader"
 client = boto3.client('dynamodb')
 table = boto3.resource('dynamodb').Table(table_name)
 
-# item_richard = {
-#     "User":{
-#         "S": "richard"
-#     },
-#     "Password":{
-#         "S": "4573a839ffe27bbd6a9305d6ea6617b7332a5cb8659fbfdc256fe917eda0a79e"
-#     },
-#     "Balance": {
-#         "S": "5000.00"
-#     },
-#     "Portfolio": {
-#         "L": [
-#             {
-#                 "M": {
-#                     "dogecoin": {
-#                         "S": "100"
-#                     }
-#                 }
-#             }
-#         ]
-#     }
-# }
 item_get = {
     "User":{
         "S": "richard"
     }
 }
-    # "Password":{
-    #     "S": "4573a839ffe27bbd6a9305d6ea6617b7332a5cb8659fbfdc256fe917eda0a79e"
-    # },
-    # "Balance": {
-    #     "S": "5000.00"
-    # },
-    # "Portfolio": {
-    #     "L": [
-    #         {
-    #             "M": {
-    #                 "dogecoin": {
-    #                     "S": "100"
-    #                 }
-    #             }
-    #         }
-    #     ]
-    # }
-#}
-#db.put_item(TableName = table_name, Item = item_richard)
-#response = db.get_item(TableName=table_name, Key = item_get)
-#response = table.get_item(Key={'User':'richard'})
-#print(response["Item"]['Portfolio'][0]['dogecoin'])
-# response = requests.get("https://valorant-api.com/v1/weapons")
 
-# response = response.json()
-# response_data = response["data"]
-# #data_dict = response_data.keys()
-# for item in response_data:
-#     weapon = item["displayName"]
-#     fireRate = item["weaponStats"]["fireRate"]
-#     category = item["category"].replace("EEquippableCategory::", "")
-#     gunPic = item["displayIcon"]
-#     print(f"{weapon}({category})'s fire rate: {fireRate}                 link to pic->{gunPic}")
-#     #print(item["displayIcon"])
-
-# response = requests.get("https://www.fruityvice.com/api/fruit/all").json()
-
-# for fruit in response:
-#     fruitName = fruit["name"]
-#     sugar = fruit["nutritions"]["sugar"]
-#     print(f"{fruitName} has {sugar}g of sugar")
-
-#userRecord = {}
 cryptoList = []
 columns = ["User", "Password", "Balance", "Portfolio"]
 #portfolioRecord = {}
@@ -160,14 +96,10 @@ while True:
 
         print(f"{input_name} sold ${amount} {cryptocoin2sell}. Your balance is now {user.getBal()}.")
 
-        #userRecord[input_name].portfolio = {k:v for k,v in userRecord[input_name].portfolio.items() if v==0.0}
-
         display.Display.displayTradingMenu()
         action = input()
 
     elif action == "3":
-        # for coin in userRecord[input_name].portfolio:
-        #     print(coin)
         print(user.getPortfolio())
         display.Display.displayTradingMenu()
         action = input()
