@@ -1,1 +1,1 @@
-# API_practice
+# CryptoTrader
