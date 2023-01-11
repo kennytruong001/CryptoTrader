@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Welcome to CryptoTrader"> 
+        <title>CryptoTrader</title>
+        <link rel="stylesheet" href="../static/css/home.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    </head>
+
+    <body>
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="../static/images/logo.png"></a>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">ABOUT</a></li>
+                        <li><a href="">CONTACT</a></li>
+                        <li><a href="">HELP</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="text-box">
+                <h1>Online cryptocurrency trading simulator {{name}}</h1>
+            </div>
+            
+            <div class="form-box">
+                <div class="text-box2">
+                    <h1>{{name}}'s {{accountPortfolio}}</h1>
+                </div>
+    
+                <div class="text-box3">
+                    <h1>{{name}}'s {{accountBalance}}</h1>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <input type="action" id="action" name="action">
+                    Action
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Buy</a></li>
+                  <li><a class="dropdown-item" href="#">Sell</a></li>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <input type="coin" id="coin" name="coin">
+                    Coin
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Bitcoin</a></li>
+                  <li><a class="dropdown-item" href="#">Ethereum</a></li>
+                  <li><a class="dropdown-item" href="#">Solana</a></li>
+                  <li><a class="dropdown-item" href="#">Dogecoin</a></li>
+                </ul>
+            </div>
+            
+            <input type="text" id="amount" name="amount" placeholder="Amount">
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+            
+
+
+            <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1219.0.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="../static/js/home.js"></script>
+            
+        </section>
+        
+        <main>
+            
+
+        </main>
+        <footer>
+
+
+        </footer>
+
+    </body>
+</html> 

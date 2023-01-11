@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Welcome to CryptoTrader"> 
+        <title>CryptoTrader</title>
+        <link rel="stylesheet" href="static/css/style.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+        
+    </head>
+
+    <body>
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="../static/images/logo.png"></a>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">ABOUT</a></li>
+                        <li><a href="">CONTACT</a></li>
+                        <li><a href="">HELP</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="text-box">
+                <h1>Online cryptocurrency trading simulator</h1>
+            </div>
+
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                    <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                </div>
+
+                <form id="login" class="input-group" method="POST">
+                    <input type="text" class="input-field" id="username" placeholder="User Id"  required>
+                    <input type="password" class="input-field" id="password" placeholder="Enter Password"  required>
+                    <input type="checkbox" class="check-box"><span></span>Remember Password</span>
+                    <button type="submit" class="submit-btn" >Log in</button>
+                </form> 
+
+                <form id="register" class="input-group" method="POST">
+                    <input type="text" class="input-field" id="username" placeholder="User Id" required>
+                    <input type="text" class="input-field" id="password" placeholder="Password" required>
+                    <input type="text" class="input-field" id="password2" placeholder="Confirm password" required>
+                    <input type="checkbox" class="check-box" required><span></span>I agree to the terms and conditions</span>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+            
+
+            </div>
+
+            <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1219.0.min.js"></script>
+            <script src="../static/js/index.js"></script>
+
+        </section>
+        
+        <main>
+            
+
+        </main>
+        <footer>
+
+
+        </footer>
+
+    </body>
+</html> 

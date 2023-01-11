@@ -23,6 +23,7 @@ response = requests.get("https://api.coingecko.com/api/v3/coins/").json()
 for item in response:
     cryptoList.append(item["id"])
 
+print(cryptoList)
 # recordFile = open("record.txt", "r+")
 # for line in recordFile:
 #     username, password, bal, portfolio= line.strip().split(",")
