@@ -2,15 +2,16 @@ from flask import Blueprint, render_template, request, flash, redirect, url_for
 #import key_config as keys
 import boto3 
 import hashlib
+import json
 
-ACCESS_KEY_ID='AKIARTYATDA47PJGBUGN'
-ACCESS_SECRET_KEY='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'
 
 auth = Blueprint('auth', __name__)
+f = open('config.json')
+secret = json.load(f)
 
 client = boto3.client('dynamodb')
-table = boto3.resource('dynamodb', aws_access_key_id=ACCESS_KEY_ID,
-                    aws_secret_access_key=ACCESS_SECRET_KEY).Table("CryptoTrader")
+table = boto3.resource('dynamodb', aws_access_key_id=secret["ACCESS_KEY_ID"],
+                    aws_secret_access_key=secret["ACCESS_SECRET_KEY"]).Table("CryptoTrader")
                     
 
 
@@ -65,3 +66,4 @@ def sign_up():
             #         return render_template("home.html",name = name)
     return render_template("sign_up.html")
     
+f.close()
