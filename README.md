@@ -5,9 +5,56 @@ Creates a command line interface that allows users to trade cryptocurrency via p
 This program utilizes CoinGecko's API to track the real time prices of cryptocurrencies and AWS DynamoDB to store the user's information to see their portfolio.
 
 
+## Here is a list of cryptocurrencies that users can trader for:
 
-
-Here is a list of cryptocurrencies that users can trader for:
-
-bitcoin, ethereum, tether, usd-coin, binancecoin, ripple, cardano, binance-usd, solana, dogecoin, polkadot, shiba-inu, staked-ether, avalanche-2, dai, matic-network, tron, wrapped-bitcoin, ethereum-classic, okb, leo-token, litecoin, ftx-token, near, chainlink, uniswap, crypto-com-chain, cosmos, stellar, monero, flow, bitcoin-cash, algorand, vechain, filecoin, internet-computer, apecoin, chain-2, decentraland, the-sandbox, tezos, hedera-hashgraph, eos, axie-infinity, quant-network, aave, frax, lido-dao, theta-token, elrond-erd-2
+- Bitcoin
+- Ethereum
+- Tether, 
+- usd-coin, 
+- Binancecoin, 
+- Ripple, 
+- Cardano, 
+- Binance-usd
+- Solana
+- Dogecoin 
+- Polkadot
+- Shiba-inu
+- Staked-ether 
+- Avalanche-2 
+- Dai 
+- Matic-network
+- Tron 
+- Wrapped-bitcoin 
+- Ethereum-classic 
+- Okb 
+- Leo-token
+- Litecoin
+- Ftx-token
+- Nnear
+- Cchainlink 
+- Uniswap 
+- Crypto-com-chain 
+- Cosmos 
+- Stellar 
+- Monero
+- Flow
+- Bitcoin-cash
+- Algorand
+- Vechain
+- Filecoin
+- Internet-computer
+- Apecoin
+- Chain-2
+- Decentraland
+- The-sandbox
+- Tezos
+- Hedera-hashgraph
+- Eos
+- Axie-infinity
+- Quant-network
+- Aave
+- Frax
+- Lido-dao
+- Theta-token,
+- Elrond-erd-2
 
