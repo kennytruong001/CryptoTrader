@@ -1,4 +1,6 @@
 /// <reference types="aws-sdk" />
+f = open('config.json')
+secret = json.load(f)
 
 var x = document.getElementById("login")
 var y = document.getElementById("register");
@@ -23,7 +25,7 @@ function read(username){
     //var AWS = import('aws-sdk');
     // Set the region 
     AWS.config.update({region: 'us-west-1'});
-    AWS.config.credentials = new AWS.Credentials('AKIARTYATDA47PJGBUGN', '5vRj4J8urcgIabFKaW6Bww1WN7MNkdm7Yhxoob44');
+    AWS.config.credentials = new AWS.Credentials(secret["ACCESS_KEY_ID"], secret["ACCESS_SECRET_KEY"]);
     
     // Create the DynamoDB service object
     var ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
@@ -32,7 +34,6 @@ function read(username){
     TableName: 'CryptoTrader',
     Key: {
         'User' : {S: username}
-        //'Password': '99d3fd0fa8fe115ef5983b5472cc95a88f2790a6fa89f8785da5afbe7b548bba'
     },
     //ProjectionExpression: 'ATTRIBUTE_NAME'
     };
@@ -52,7 +53,7 @@ function validate(){
     var password = document.getElementById("password").value;
     var temp = '';
     AWS.config.update({region: 'us-west-1'});
-    AWS.config.credentials = new AWS.Credentials('AKIARTYATDA47PJGBUGN', '5vRj4J8urcgIabFKaW6Bww1WN7MNkdm7Yhxoob44');
+    AWS.config.credentials = new AWS.Credentials(secret["ACCESS_KEY_ID"], secret["ACCESS_SECRET_KEY"]);
     
     // Create the DynamoDB service object
     var ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});

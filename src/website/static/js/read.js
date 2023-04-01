@@ -1,9 +1,12 @@
 // Load the AWS SDK for Node.js
+f = open('config.json')
+secret = json.load(f)
+
 var AWS = require('aws-sdk');
 var user = 'kenny';
 // Set the region 
 AWS.config.update({region: 'us-west-1'});
-AWS.config.credentials = new AWS.Credentials('AKIARTYATDA47PJGBUGN', '5vRj4J8urcgIabFKaW6Bww1WN7MNkdm7Yhxoob44');
+AWS.config.credentials = new AWS.Credentials(secret["ACCESS_KEY_ID"], secret["ACCESS_SECRET_KEY"]);
 
 // Create the DynamoDB service object
 var ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
@@ -12,7 +15,6 @@ var params = {
 TableName: 'CryptoTrader',
 Key: {
     'User' : {S: user}
-    //'Password': {S:'99d3fd0fa8fe115ef5983b5472cc95a88f2790a6fa89f8785da5afbe7b548bba'}
 },
 //ProjectionExpression: 'ATTRIBUTE_NAME'
 };
